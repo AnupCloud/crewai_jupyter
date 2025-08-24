@@ -1,0 +1,16 @@
+[project]
+name = "crew-ai-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "crewai",
+    "crewai-tools",
+    "exa-py",
+    "ipykernel>=6.30.1",
+    "jupter>=0.1.0",
+    "jupyter>=1.1.1",
+    "notebook>=7.4.5",
+    "typing-extensions>=4.14.1",
+]
