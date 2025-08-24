@@ -1,4 +1,31 @@
-# Python
+# ==========================================
+# CrewAI Jupyter Project - .gitignore
+# ==========================================
+
+# ===== API Keys & Environment Variables =====
+# CRITICAL: Never commit API keys or secrets
+.env
+.env.*
+!.env.example
+!.env.template
+config.json
+secrets.json
+credentials.json
+api_keys.txt
+keys.txt
+
+# ===== Virtual Environments =====
+.venv/
+.venv_manual/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+conda-meta/
+
+# ===== Python =====
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,35 +47,71 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*.pyc
+*.pyo
 
-# Virtual environments
-.env
-.venv/
-.venv_manual/
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# ===== Jupyter Notebook =====
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+.jupyter/
+.local/share/jupyter/
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# ===== CrewAI Specific =====
+# CrewAI cache and temporary files
+.crewai_cache/
+crew_output/
+agent_logs/
+task_results/
+*.crew_backup
 
-# IDE
+# ===== UV Package Manager =====
+.uv_cache/
+uv.lock.bak
+
+# ===== AI/ML Common Files =====
+# Model files (often large)
+*.model
+*.pkl
+*.pickle
+*.joblib
+models/
+checkpoints/
+weights/
+*.h5
+*.pb
+
+# Data files (often large or sensitive)
+data/
+datasets/
+*.csv
+*.json
+*.parquet
+*.feather
+*.xlsx
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== Logs =====
+*.log
+logs/
+log/
+*.out
+*.err
+
+# ===== IDE & Editors =====
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.spyderproject
+.spyproject
+.ropeproject
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb_checkpoints/
-
+# ===== OS Specific =====
 # macOS
 .DS_Store
 .AppleDouble
@@ -61,17 +124,12 @@ Icon?
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-.com.apple.timemachine.donotpresent
 
 # Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-*.cab
-*.msi
-*.msm
-*.msp
 *.lnk
 
 # Linux
@@ -79,81 +137,27 @@ $RECYCLE.BIN/
 .fuse_hidden*
 .directory
 .Trash-*
-.nfs*
 
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Runtime data
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-
-# nyc test coverage
-.nyc_output
-
-# Dependency directories
-node_modules/
-
-# Optional npm cache directory
-.npm
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-.env.test
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
-
-# API Keys and Secrets
-config.json
-secrets.json
-credentials.json
-
-# Temporary files
+# ===== Temporary Files =====
 *.tmp
 *.temp
 temp/
 tmp/
+.cache/
+cache/
 
-# UV
-.uv_cache/
+# ===== Testing =====
+.pytest_cache/
+.coverage
+.nyc_output
+coverage/
+*.cover
+.hypothesis/
+
+# ===== Documentation =====
+docs/_build/
+site/
+
+# ===== Git =====
+*.patch
+*.diff
